@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_zap.ogg-e5d5d2094f700df7c1d85fe6c573a99e.oggstr"
+
+[deps]
+
+source_file="res://Assets/Spaceship_art_pack_2/Bonus/sfx_zap.ogg"
+dest_files=[ "res://.import/sfx_zap.ogg-e5d5d2094f700df7c1d85fe6c573a99e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
