@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/Rocket.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 35 )
+extents = Vector2( 32, 48.2676 )
 
 [node name="Rocket" type="KinematicBody2D"]
 position = Vector2( 300, 300 )
@@ -18,5 +18,14 @@ texture = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="shoot" type="Position2D" parent="."]
+[node name="ShootingPositions" type="Node2D" parent="."]
 position = Vector2( 37, 0 )
+
+[node name="shoot" type="Position2D" parent="ShootingPositions"]
+position = Vector2( -32, -47 )
+
+[node name="shoot2" type="Position2D" parent="ShootingPositions"]
+position = Vector2( -33, 48 )
+
+[node name="FireDelayTimer" type="Timer" parent="."]
+one_shot = true

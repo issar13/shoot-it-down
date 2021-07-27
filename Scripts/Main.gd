@@ -1,9 +1,8 @@
 extends Node2D
 
 onready var asta = preload('res://Scenes/Asteroids.tscn')
+const SCALE = [0.2,0.3,0.4]
 
-func _on_Rocket_bullet_created(new_bullet):
-	add_child(new_bullet)
 
 func _on_Timer_timeout():
 	$AsteroidSpawn/AsteroidSpawnLocation.offset = randi()
@@ -13,5 +12,3 @@ func _on_Timer_timeout():
 	astero.position = $AsteroidSpawn/AsteroidSpawnLocation.position
 	direction += rand_range(-TAU / 8, TAU / 8)
 	astero.rotation = direction
-	#astero.linear_velocity = Vector2(200, 0).rotated(direction)
-	#astero.look_at($Planet.position)
