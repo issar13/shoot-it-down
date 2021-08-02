@@ -30,3 +30,4 @@ position = Vector2( -33, 48 )
 [node name="FireDelayTimer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+autostart = true

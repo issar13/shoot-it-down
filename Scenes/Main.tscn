@@ -81,4 +81,3 @@ autostart = true
 [connection signal="increase" from="." to="." method="increase_time"]
 [connection signal="timeout" from="SmallSpawn" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="BigSpawn" to="." method="_on_BigSpawn_timeout"]
-[connection signal="timeout" from="BulletIncrease" to="Rocket" method="_on_BulletIncrease_timeout"]

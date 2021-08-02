@@ -8,13 +8,16 @@ onready var explode = preload('res://Scenes/ParticlesEffect.tscn')
 onready var brown = preload('res://Scenes/brown.tscn')
 
 
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	look_at(planet.position)
+# warning-ignore:return_value_discarded
 	move_and_slide(velocity.rotated(rotation) * SPEED) 
 
 func _ready():
 	$Asteroids.animation = asteroid_types[randi() % asteroid_types.size()]
 
+# warning-ignore:unused_argument
 func _on_Collide_body_entered(body):
 		var effect = explode.instance()
 		effect.position = position
