@@ -7,8 +7,7 @@ onready var bullet = preload('res://Scenes/Laser.tscn')
 onready var shoot_positions = $ShootingPositions
 onready var fireDelayTimer := $FireDelayTimer
 
-export var fireDelay: float = 0.1
-
+export var firedelay = 0.1
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -27,7 +26,7 @@ func _physics_process(delta):
 
 func _input(event):
 	if event.is_action_pressed("shoot") and fireDelayTimer.is_stopped():
-		fireDelayTimer.start(fireDelay)
+		fireDelayTimer.start(firedelay)
 		for child in shoot_positions.get_children():
 			var new_bullet = bullet.instance()
 			new_bullet.global_position = child.global_position
